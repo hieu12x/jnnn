@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        Họ tên: <input  type="text" id="name" name="name"><br>
+       
+        Mật khẩu: <input type="password" id="password" name="password"><br>
+        Xác nhận mật khẩu <input type="password" id="cfpassword" name="cfpassword"><br>
+        <input type="submit" value="Đăng Ký">
+        <script>
+            document.getElementById("myForm").addEventListener("submit", function(event){
+                event.preventDefault
+                var name = document.getElementById("name").value
+                var password = document.getElementById("password").value
+                var cfpassword = document.getElementById("cfpassword").value
+                var errors = []
+                if(name == "" ){
+            errors.push("Họ tên ko d cbor tống");
+        }
+        if(password != cfpassword){
+    errors.push("Xác nhận mật khẩu không khớp với mật khẩu");
+  }
+  if(errors.length > 0){
+    alert(errors.join("\n"));
+    return false;
+  }
+  
+  alert("Đăng ký thành công!");
+});
+                
+        
+        </script>
+</body>
+</html>
