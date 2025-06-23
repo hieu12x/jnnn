@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>May tinh don gian</h2>
+
+<button onclick="xoaNhapLieu()">C</button>
+<button onclick="themSo('1')">1</button>
+<button onclick="themSo('2')">2</button>
+<button onclick="themSo('3')">3</button>
+<button onclick="themToanTu('+')">+</button><br>
+
+<button onclick="themSo('4')">4</button>
+<button onclick="themSo('5')">5</button>
+<button onclick="themSo('6')">6</button>
+<button onclick="themToanTu('-')">-</button><br>
+
+<button onclick="themSo('7')">7</button>
+<button onclick="themSo('8')">8</button>
+<button onclick="themSo('9')">9</button>
+<button onclick="themToanTu('*')">*</button><br>
+
+<button onclick="themSo('0')">0</button>
+<button onclick="tinhToan()">=</button>
+<button onclick="themToanTu('/')">/</button>
+
+<p id="hienThi"></p>
+
+<script>
+let toanHang1 = '';
+let toanHang2 = '';
+let toanTu = '';
+let ketQua = '';
+
+function themSo(so) {
+  if (toanTu === '') {
+    toanHang1 += so;
+  } else {
+    toanHang2 += so;
+  }
+  document.getElementById("hienThi").innerHTML = toanHang1 + ' ' + toanTu + ' ' + toanHang2;
+}
+
+function themToanTu(op) {
+  toanTu = op;
+  document.getElementById("hienThi").innerHTML = toanHang1 + ' ' + toanTu + ' ' + toanHang2;
+}
+
+function tinhToan() {
+  toanHang1 = parseFloat(toanHang1);
+  toanHang2 = parseFloat(toanHang2);
+  switch(toanTu) {
+    case '+':
+      ketQua = toanHang1 + toanHang2;
+      break;
+    case '-':
+      ketQua = toanHang1 - toanHang2;
+      break;
+    case '*':
+      ketQua = toanHang1 * toanHang2;
+      break;
+    case '/':
+      ketQua = toanHang1 / toanHang2;
+      break;
+  }
+  document.getElementById("hienThi").innerHTML = ketQua;
+  xoaNhapLieu();
+}
+
+function xoaNhapLieu() {
+  toanHang1 = '';
+  toanHang2 = '';
+  toanTu = '';
+  ketQua = '';
+}
+
+</script>
+
+
+</body>
+</html>
