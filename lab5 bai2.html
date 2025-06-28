@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang bán hàng</title>
+</head>
+<body>
+    <table id="products">
+        <!-- Thêm các sản phẩm của bạn vào đây -->
+        <tr>
+            <td>iPhone9</td>
+            <td>1300</td>
+            <td><button onclick='them(this)'>Thêm</button></td>
+        </tr>
+        <tr>
+            <td>Sony Xperia</td>
+            <td>1200</td>
+            <td><button onclick='them(this)'>Thêm</button></td>
+        </tr>
+        <tr>
+            <td>Nokia 2020</td>
+            <td>900</td>
+            <td><button onclick='them(this)'>Thêm</button></td>
+        </tr>
+    </table>
+
+    <table id="cart">
+        
+    </table>
+
+    <span>Tổng tiền: </span><span id="tong"></span>
+
+    <script>
+        function them(button) {
+            var row = button.parentElement.parentElement.cloneNode(true);
+            var btnXoa = row.getElementsByTagName("button")[0];
+            btnXoa.innerText = "Xóa";
+            btnXoa.setAttribute('onclick', 'xoa(this)');
+            document.getElementById("cart").appendChild(row);
+            tinhTong();
+        }
+
+        function xoa(button) {
+            var row = button.parentElement.parentElement;
+            document.getElementById("cart").removeChild(row);
+            tinhTong();
+        }
+
+        function tinhTong() {
+            var cart = document.getElementById("cart");
+            var rows = cart.getElementsByTagName("tr");
+            var tong = 0;
+            for (var i = 0; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName("td");
+                var price = cells[1].innerText;
+                tong += 1 * price;
+            }
+            document.getElementById("tong").innerText = tong;
+        }
+    </script>
+</body>
+</html>
