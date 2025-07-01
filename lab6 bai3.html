@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Slideshow</title>
+</head>
+<body>
+    <img id="slideshow" src="anh1.png" width="500" height="600">
+    <br>
+    <button onclick="first()">First</button>
+    <button onclick="prev()">Prev</button>
+    <button onclick="next()">Next</button>
+    <button onclick="last()">Last</button>
+
+    <script type="text/javascript">
+        var images = ["anh1.png", "anh2.jpg", "anh3.jpg", "anh4.png", "anh5.jpg"];
+        var index = 0;
+
+        function first() {
+            index = 0;
+            document.getElementById("slideshow").src = images[index];
+        }
+
+        function last() {
+            index = images.length - 1;
+            document.getElementById("slideshow").src = images[index];
+        }
+
+        function next() {
+            if(index < images.length - 1) {
+                index++;
+                document.getElementById("slideshow").src = images[index];
+            }
+        }
+
+        function prev() {
+            if(index > 0) {
+                index--;
+                document.getElementById("slideshow").src = images[index];
+            }
+        }
+    </script>
+</body>
+</html>
