@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.tong{
+    width: 1000px;
+    margin: auto;
+}
+.logo img{
+    width: 1000px;
+    float: left;
+}
+.menu ul li{
+    list-style: none;
+    float: left;
+}
+.menu ul li a{
+    text-decoration: none;
+    padding: 5px;
+}
+.new1{
+    width: ;
+    height: ;
+    float: left;
+    margin-right: ;
+    border: ;
+}
