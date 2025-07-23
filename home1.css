@@ -1,0 +1,88 @@
+*{
+    padding: 0px;
+    margin: 0px
+}
+body{
+    background:#fff;
+    font-family: Tahoma;
+}
+.tong{
+    width: 1000px;
+    margin: auto;
+}
+.logo img{
+    height: 100px;
+    width: 1000px;
+    float: left;
+    
+
+}
+.menu ul li{
+    list-style: none;
+    float: left;
+    padding-left: 0px;
+    
+}
+.menu ul li a{
+    text-decoration: none;
+    padding: 5px;
+
+}
+.bannner{
+    float: left;
+}
+.new1{
+    width: 305px;
+    height: 360px;
+    float: left;
+    margin-right: 26px;
+    border: 0.5px solid #f95512;
+
+}
+.new1 h4{
+padding-left: 25px;
+padding-top: 10px;
+font-size: 16px;
+font-weight: bold;
+
+}
+.new1 img{
+padding-left: 25px;
+padding-top: 10px;
+
+}
+.new1 p{
+padding-left: 25px;
+padding-top: 10px;
+font-size: 13px;
+}
+.td{
+    text-align: center;
+    color: red;
+}
+.cuoi{
+    width: 1000px;
+    height: 300px;
+    border: 0.5px solid #f95512;
+}
+.cuoi img{
+    width: 500px;
+    height: 250px;
+    float: left;
+    margin-top: 20px;
+    
+}
+.cuoi p{
+    width: 350px;
+    height: 200px;
+    float:right;
+    margin-top: 30px;
+}
+footer{
+    clear: both;
+    min-height: 50px;
+    background-color:red ;
+    text-align: center;
+    line-height: 50px;
+    border-top: 1px dotted red ;
+}
