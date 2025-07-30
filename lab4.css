@@ -1,0 +1,33 @@
+em{
+    font-variant:small-caps;
+    font-size:20px;
+word-spacing:2px;
+ letter-spacing:1px;
+line-height:25px;
+
+}
+
+
+
+h2{
+    color: red;
+
+}
+    
+
+
+h3{
+    font-variant: 20;
+    color: blue;
+}
+h4{
+    font-variant: 20; 
+    color: aquamarine;
+}
+strong{
+    color: brown;
+    font-weight: bold;
+}
+body{
+ Text-align:center
+}
