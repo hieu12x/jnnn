@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lab10 bai1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-group">
+        <label class="chu">Họ và tên:</label> <br>
+        <input type="text" class="form-control" tabindex="1">
+        
+    </div>
+    <div class="form-group"></div><fieldset style="margin: 10px 0px;">
+        <legend>Giới tính:</legend> <br>
+        <input  type="radio"> <span class="chu">Nam</span>
+        <input  type="radio"> <span class="chu">Nữ</span> </fieldset>
+    </div>
+    <div class="form-group">
+        <label class="chu">ngày sinh</label> <br>
+        <input type="date">
+
+    </div>
+    <div class="form-group">
+        <label class="chu">Điểm:</label> <br>
+        <input class="form-control" type="number" min="0" max="10" step="0.25">
+    </div>
+    <div class="form-group">
+    <label class="chu">Nghề nghiệp:</label> <br>
+    <input class="form-control" type="list" list="die">
+    <datalist>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+    </datalist>
+    </div>
+    <div><fieldset style="margin: 10px 0px;">
+        <legend>Sở thích:</legend> <br>
+        <input type="checkbox" class="chu">Thể thao
+        <input type="checkbox"class="chu">Du lịch
+        <input type="checkbox" class="chu">Âm nhạc
+        <input type="checkbox" class="chu">Ẩm thực</fieldset>
+    </div>
+    <div>
+        <label class="chu">Ghi chú:</label> <br>
+        <textarea rows="5" cols="30" tabindex="2"></textarea>
+
+    </div>
+    <div class="form-group">
+        <button class="form-button" tabindex="3">Đăng ký</button>
+        <button class="form-button" tabindex="4">Nhập lại</button>
+    </div>
+</body>
+</html>
